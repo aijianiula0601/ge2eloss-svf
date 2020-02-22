@@ -29,6 +29,11 @@ python train.py \
 --log_dir /tmp/svf/log_wj \
 --checkpoint /tmp/svf/checkpoint_wj
 ```
+# 训练效果
+<div align=center>
+  <img src="https://github.com/aijianiula0601/ge2eloss-svf/blob/master/imgs/ge2e_train.jpg"  alt="训练展示" width = "300" height = "300" />
+</div>
+
 # 验证eer
 
 可以参考代码中：
@@ -37,13 +42,11 @@ python train.py \
 2.eval_test/v2/eval_eer.py
 ```
 
-# 训练效果
-<div align=center>
-  <img src="https://github.com/aijianiula0601/ge2eloss-svf/blob/master/imgs/ge2e_train.jpg"  alt="训练展示" width = "300" height = "300" />
-</div>
-
-测试集上的效果：
+# 测试集上的效果
 
 | 数据集-音频长度5s以上 | 不在训练集中的240个speaker,每个speaker至少10段5s以上音频,采样率8k | aishell的test数据集，采样率16k转为8k才测试 | aishell的train数据集,采样率16k转为8k才测试 | magicdata_mandarin_chinese采样率16k转为8k才测试 |
 | ------ | ------ | ------ | ------ | ------ |
 | eer | 0.018 | 0.04 | 0.025 | 0.04 |
+
+#参考：
+https://github.com/CorentinJ/Real-Time-Voice-Cloning/tree/master/encoder
