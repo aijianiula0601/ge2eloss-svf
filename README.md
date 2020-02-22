@@ -38,8 +38,9 @@ python train.py \
 ```
 
 # 训练效果
-训练收敛情况：
-![image] https://github.com/aijianiula0601/ge2eloss-svf/blob/master/imgs/ge2e_train.jpg?raw=true
+<div align=center>
+  <img src="https://github.com/aijianiula0601/ge2eloss-svf/blob/master/imgs/ge2e_train.jpg"  alt="训练展示" width = "300" height = "300" />
+</div>
 
 测试集上的效果：
 
