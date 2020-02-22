@@ -1,5 +1,5 @@
 # ge2eloss-svf
-Tensorflow implementation of Generalized End-to-End Loss for speaker verification, proposed by google in 2017 in https://arxiv.org/pdf/1710.10467.pdf
+Tensorflow implementation of Generalized End-to-End Loss for speaker verification, proposed by google on 2017 in https://arxiv.org/pdf/1710.10467.pdf
 
 # Environment
 python3.7,tensorflow-gpu==1.4.0
