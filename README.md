@@ -40,7 +40,7 @@ python train.py \
 2.eval_test/v2/eval_eer.py
 ```
 
-# Test results
+# Test result
 
 | dataset-audio>=5s | test-data with 240 speakers not found int train-data.Each speaker must have at least 10 pieces of 5s + audio.sample rate is 8k | testdata from aishell.resample to 8k | traindata in aishell.resample to 8k | magicdata_mandarin_chinese's test data resample to 8k |
 | ------ | ------ | ------ | ------ | ------ |
