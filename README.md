@@ -1,0 +1,2 @@
+# ge2eloss-svf
+本项目是采用tensorflow实现Google的ge2e的声纹识别项目
