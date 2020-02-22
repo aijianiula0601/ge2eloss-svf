@@ -42,7 +42,7 @@ python train.py \
 
 # Test result
 
-| dataset-audio>=5s | test-data with 240 speakers not found int train-data.Each speaker must have at least 10 pieces of 5s + audio.sample rate is 8k | testdata from aishell.resample to 8k | traindata in aishell.resample to 8k | magicdata_mandarin_chinese's test data resample to 8k |
+| dataset-audio>=5s | test-data with 240 speakers not found in train-data.Each speaker must have at least 10 pieces of 5s + audio.Sample rate is 8k | testdata from aishell.Resample to 8k | traindata in aishell.Resample to 8k | magicdata_mandarin_chinese's test data resample to 8k |
 | ------ | ------ | ------ | ------ | ------ |
 | eer | 0.018 | 0.04 | 0.025 | 0.04 |
 
