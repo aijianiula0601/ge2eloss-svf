@@ -48,5 +48,5 @@ python train.py \
 | ------ | ------ | ------ | ------ | ------ |
 | eer | 0.018 | 0.04 | 0.025 | 0.04 |
 
-#参考：
+# 参考：
 https://github.com/CorentinJ/Real-Time-Voice-Cloning/tree/master/encoder
