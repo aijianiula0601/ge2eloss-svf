@@ -2,15 +2,15 @@
 在supervisor的配置文件/etc/supervisord.conf中配置如下:
 
 [program: asr2text]
-command = /home/huangjiahong/anaconda3/envs/speechRecognition_gpu/bin/gunicorn asr_api_manang:app -c /home/huangjiahong/svn_projects/asr_keras/main/service/config/gunicorn_conf.py
-directory = /home/huangjiahong/svn_projects/asr_keras/main/service
-user = huangjiahong ;
+command = /home/user/anaconda3/envs/speechRecognition_gpu/bin/gunicorn asr_api_manang:app -c /home/user/svn_projects/asr_keras/main/service/config/gunicorn_conf.py
+directory = /home/user/svn_projects/asr_keras/main/service
+user = user ;
 autostart=true ;
 autorestart=true ;
-environment = PYTHONPATH="/home/huangjiahong/svn_projects/asr_keras" ;
+environment = PYTHONPATH="/home/user/svn_projects/asr_keras" ;
 redirect_stderr=true ;
 logfile_backups=10 ;
 stdout_logfile_backups=10 ;
 logfile_maxbytes=50MB ;
-stderr_logfile=/home/huangjiahong/tmp/logs/api/asr/err.log ;
-stdout_logfile=/home/huangjiahong/tmp/logs/api/asr/info.log ;
+stderr_logfile=/home/user/tmp/logs/api/asr/err.log ;
+stdout_logfile=/home/user/tmp/logs/api/asr/info.log ;

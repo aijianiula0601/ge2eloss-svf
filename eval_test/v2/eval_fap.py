@@ -18,7 +18,7 @@ import hparams as hp
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '6'
 
-read_dir = '/home/huangjiahong/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16_embed'
+read_dir = '/home/user/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16_embed'
 
 speaker_num = 20
 

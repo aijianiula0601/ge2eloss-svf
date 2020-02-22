@@ -13,7 +13,7 @@ import hparams as hp
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '7'
 
-read_dir = '/home/huangjiahong/tmp/svf/dataset/kefu/test_dataset/test_aishell_embed_vector_v1'
+read_dir = '/home/user/tmp/svf/dataset/kefu/test_dataset/test_aishell_embed_vector_v1'
 
 batch_size = 10
 utterance_num = 10

@@ -19,8 +19,8 @@ from modules import calculate_eer
 os.environ["CUDA_VISIBLE_DEVICES"] = '6'
 
 # model_file = "E:\Download/train_model_epoch_1630_gs_40749.0"
-model_file = "/home/huangjiahong/tmp/svf/checkpoint/dev/dev_mode_epoch_2020_gs_250480.0_eer_0.025263"
-# model_file = "/home/huangjiahong/tmp/svf/checkpoint_en/dev/dev_mode_epoch_1259_gs_112051.0_eer_0.015000"
+model_file = "/home/user/tmp/svf/checkpoint/dev/dev_mode_epoch_2020_gs_250480.0_eer_0.025263"
+# model_file = "/home/user/tmp/svf/checkpoint_en/dev/dev_mode_epoch_1259_gs_112051.0_eer_0.015000"
 
 pm.batch_size = 20
 pm.utterances_per_speaker = 10
@@ -42,11 +42,11 @@ except Exception as e:
     pass
 
 # mel_feature_dir = r'E:\dataset\speechRecognition\aishell_test_features'
-# mel_feature_dir = '/home/huangjiahong/tmp/tts/dataset/libriSpeech/aishell_test_features'
-mel_feature_dir = '/home/huangjiahong/tmp/tts/dataset/libriSpeech/aishell_train_features'
-# mel_feature_dir = '/home/huangjiahong/tmp/tts/dataset/libriSpeech/test-clean_features'
-# mel_feature_dir = '/home/huangjiahong/tmp/tts/dataset/libriSpeech/train-other-500_features'
-# mel_feature_dir = '/home/huangjiahong/tmp/tts/dataset/libriSpeech/MAGICDATA_Mandarin_Chinese_Speech_test_features'
+# mel_feature_dir = '/home/user/tmp/tts/dataset/libriSpeech/aishell_test_features'
+mel_feature_dir = '/home/user/tmp/tts/dataset/libriSpeech/aishell_train_features'
+# mel_feature_dir = '/home/user/tmp/tts/dataset/libriSpeech/test-clean_features'
+# mel_feature_dir = '/home/user/tmp/tts/dataset/libriSpeech/train-other-500_features'
+# mel_feature_dir = '/home/user/tmp/tts/dataset/libriSpeech/MAGICDATA_Mandarin_Chinese_Speech_test_features'
 meta_file = mel_feature_dir + '/meta.txt'
 dataset, num_batch = get_dataset(mel_feature_base_dir=mel_feature_dir, meta_file=meta_file)
 iterator = dataset.make_initializable_iterator()

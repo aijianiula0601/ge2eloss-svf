@@ -189,8 +189,8 @@ if __name__ == '__main__':
     # pm.meta_file = "test_data/meta.txt"
     # pm.mel_feature_base_dir = "test_data"
 
-    pm.meta_file = "/home/huangjiahong/tmp/tts/dataset/train-clean-100/LibriSpeech/train-clean-100_features/meta.txt"
-    pm.mel_feature_base_dir = "/home/huangjiahong/tmp/tts/dataset/train-clean-100/LibriSpeech/train-clean-100_features"
+    pm.meta_file = "/home/user/tmp/tts/dataset/train-clean-100/LibriSpeech/train-clean-100_features/meta.txt"
+    pm.mel_feature_base_dir = "/home/user/tmp/tts/dataset/train-clean-100/LibriSpeech/train-clean-100_features"
 
     with tf.Session() as sess:
         dataset, num_batch = get_dataset(mel_feature_base_dir=pm.mel_feature_base_dir)

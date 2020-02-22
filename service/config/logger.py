@@ -6,7 +6,7 @@ import re
 
 # from main.service.config.config import LOG_DIR
 
-LOG_DIR = '/home/huangjiahong/tmp/logs/api/asr'
+LOG_DIR = '/home/user/tmp/logs/api/asr'
 LOG_FILE = LOG_DIR + '/info.log'
 
 

@@ -27,7 +27,7 @@ from helper.slice_utterance import slice_utterance_mel
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
-model_file = "/home/huangjiahong/tmp/svf/better_model/20191211/dev_mode_epoch_191_gs_47368.0_eer_0.027632"
+model_file = "/home/user/tmp/svf/better_model/20191211/dev_mode_epoch_191_gs_47368.0_eer_0.027632"
 
 sess = tf.Session()
 # 初始化模型
@@ -67,8 +67,8 @@ if __name__ == '__main__':
     # save_path = 'E:\Download/aa.npy'
     # embedding_wav_and_save_vector(fp, save_path)
 
-    read_dir = '/home/huangjiahong/tmp/common_dataset/data_aishell/wav/test'
-    save_dir = '/home/huangjiahong/tmp/svf/dataset/kefu/test_dataset/test_aishell_embed_vector_v1'
+    read_dir = '/home/user/tmp/common_dataset/data_aishell/wav/test'
+    save_dir = '/home/user/tmp/svf/dataset/kefu/test_dataset/test_aishell_embed_vector_v1'
 
     # 新建保存向量的目录
     shutil.rmtree(save_dir, ignore_errors=True)

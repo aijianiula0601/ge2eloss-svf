@@ -19,8 +19,8 @@ import hparams as hp
 客服数据抽样12条语音，用户测试
 """
 
-read_dir = '/home/huangjiahong/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16'
-save_dir = '/home/huangjiahong/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16_sample'
+read_dir = '/home/user/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16'
+save_dir = '/home/user/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16_sample'
 
 min_second = 3
 sample_num = 10

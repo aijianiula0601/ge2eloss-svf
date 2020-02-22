@@ -27,8 +27,8 @@ from helper.slice_utterance import slice_utterance_mel
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '6'
 
-# model_file = "/home/huangjiahong/tmp/svf/checkpoint_wj/min_dev/dev_mode_epoch_253_gs_min_78430.0_eer_0.027210"
-model_file = "/home/huangjiahong/tmp/svf/checkpoint_wj_20191211/dev_mode_epoch_281_gs_69688.0_eer_0.016842"
+# model_file = "/home/user/tmp/svf/checkpoint_wj/min_dev/dev_mode_epoch_253_gs_min_78430.0_eer_0.027210"
+model_file = "/home/user/tmp/svf/checkpoint_wj_20191211/dev_mode_epoch_281_gs_69688.0_eer_0.016842"
 
 sess = tf.Session()
 # 初始化模型
@@ -70,10 +70,10 @@ if __name__ == '__main__':
     # save_path = 'E:\Download/aa.npy'
     # embedding_wav_and_save_vector(fp, save_path)
 
-    read_dir = '/home/huangjiahong/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16'
-    save_dir = '/home/huangjiahong/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16_embed_vector_v2'
+    read_dir = '/home/user/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16'
+    save_dir = '/home/user/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16_embed_vector_v2'
 
-    train_speaker_dir = '/home/huangjiahong/tmp/svf/dataset/kefu/record_wangjia_speakers_segment_feature_17to30'
+    train_speaker_dir = '/home/user/tmp/svf/dataset/kefu/record_wangjia_speakers_segment_feature_17to30'
     train_speaker_set = set()
     for speaker_dir in Path(train_speaker_dir).glob("*"):
         train_speaker_set.add(speaker_dir.name)
