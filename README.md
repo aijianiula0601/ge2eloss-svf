@@ -2,7 +2,7 @@
 Tensorflow implementation of Generalized End-to-End Loss for speaker verification, proposed by google on 2017 in https://arxiv.org/pdf/1710.10467.pdf
 
 # Environment
-python3.7,tensorflow-gpu==1.4.0
+python3.7,tensorflow-gpu==1.14.0
 
 # Dataset
 We use our own dataset which belong to the game customer service.The audio sampled with 8k.We collected the audios with 30000 speakers and segement the audio to short but greater than 6s with Vad technology.
