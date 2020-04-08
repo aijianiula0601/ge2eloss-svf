@@ -13,7 +13,7 @@ prj_dir = os.path.dirname(os.path.dirname(
 print('----prj_dir:', prj_dir)
 sys.path.append(prj_dir)
 
-from eval_test import frp_fap
+from eval_test_data.utils import frp_fap
 import hparams as hp
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '6'

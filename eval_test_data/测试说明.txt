@@ -1,0 +1,17 @@
+对于训练好的模型，验证模型好坏的步骤如下：
+
+
+1.准备测试集的每个speaker的embedding vector
+    sh -x prepare_eval_data/prepare_embed.sh
+
+
+2.测试测试数据的eer
+    python -u eval_eer.py
+
+
+3.计算测试集的错误接受率
+    python -u eval_fap.py
+
+
+4.计算测试集的错误拒绝率
+    python -u eval_frp.py

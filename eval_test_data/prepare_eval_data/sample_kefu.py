@@ -16,17 +16,11 @@ import audio
 import hparams as hp
 
 """
-客服数据抽样12条语音，用户测试
+客服数据抽样获取每个用户的音频，用户测试
 """
 
-read_dir = '/home/user/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16'
-save_dir = '/home/user/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16_sample'
 
-min_second = 3
-sample_num = 10
-
-
-def sample_speaker_wav(speaker_dir, save_dir):
+def sample_speaker_wav(speaker_dir, save_dir, sample_num, min_second):
     speaker_dir_wav_cl = [fp for fp in speaker_dir.glob("*.wav")]
 
     random.shuffle(speaker_dir_wav_cl)
@@ -46,14 +40,18 @@ def sample_speaker_wav(speaker_dir, save_dir):
 
 
 if __name__ == '__main__':
+    read_dir = sys.argv[1]
+    save_dir = sys.argv[2]
 
+    min_second = int(sys.argv[3])  # 限定音频长度
+    sample_num = int(sys.argv[4])  # 每个speaker抽样的音频个数
 
     shutil.rmtree(save_dir, ignore_errors=True)
     Path(save_dir).mkdir(exist_ok=True)
 
     executor = ProcessPoolExecutor(max_workers=8)
     all_task = [executor.submit(
-        partial(sample_speaker_wav, speaker_dir, save_dir)) for speaker_dir in
+        partial(sample_speaker_wav, speaker_dir, save_dir, sample_num, min_second)) for speaker_dir in
         Path(read_dir).glob("*")]
 
     speaker_n = 0

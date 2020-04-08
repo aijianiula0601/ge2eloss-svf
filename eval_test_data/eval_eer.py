@@ -8,7 +8,7 @@ prj_dir = os.path.dirname(os.path.dirname(
 print('prj_dir:', prj_dir)
 sys.path.append(prj_dir)
 
-from eval_test.v2.eer_ops import *
+from eval_test_data.eer_ops import *
 import hparams as hp
 
 os.environ["CUDA_VISIBLE_DEVICES"] = '7'
