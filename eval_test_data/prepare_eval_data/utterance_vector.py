@@ -62,21 +62,17 @@ def embedding_wav_and_save_vector(frames_batch, save_path):
     embed = raw_embed / np.linalg.norm(raw_embed, 2)
     np.save(file=save_path, arr=embed)
 
-    # print('向量保存至：{}'.format(save_path))
-
 
 if __name__ == '__main__':
-    # fp = 'E:\Download/A7_4.wav'
-    # save_path = 'E:\Download/aa.npy'
-    # embedding_wav_and_save_vector(fp, save_path)
 
-    read_dir = '/home/user/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16'
-    save_dir = '/home/user/tmp/svf/dataset/kefu/record_kefu_speakers_segment_16_embed_vector_v2'
+    read_dir = sys.argv[1]
+    save_dir = sys.argv[2]
 
-    train_speaker_dir = '/home/user/tmp/svf/dataset/kefu/record_wangjia_speakers_segment_feature_17to30'
+    train_speaker_dir = sys.argv[3]
     train_speaker_set = set()
-    for speaker_dir in Path(train_speaker_dir).glob("*"):
-        train_speaker_set.add(speaker_dir.name)
+    if train_speaker_dir is None or train_speaker_dir == "":
+        for speaker_dir in Path(train_speaker_dir).glob("*"):
+            train_speaker_set.add(speaker_dir.name)
 
     print('训练speaker个数:{}'.format(len(train_speaker_set)))
 
@@ -86,7 +82,7 @@ if __name__ == '__main__':
 
     i = 0
     for speaker_dir in Path(read_dir).glob("*"):
-        if speaker_dir.name in train_speaker_set:
+        if speaker_dir.name in train_speaker_set:  # 只有不出现在训练集的speaker才拿来做测试
             print('{} 存在训练集中，丢弃！！'.format(speaker_dir.name))
             continue
 
