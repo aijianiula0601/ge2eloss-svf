@@ -10,5 +10,5 @@ Flask==1.1.1
 keras==2.3.1
 scikit_learn==0.22.2.post1
 setproctitle==1.1.10
-tensorflow==2.1.0
+tensorflow==2.9.3
 tqdm==4.43.0
